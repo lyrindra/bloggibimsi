@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Yazılar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Blog - Yazılar</h1>
+  </header>
+
+  <div id="messages">
+    <!-- Mesajlar buraya eklenecek -->
+  </div>
+
+  <footer>
+    <button id="clear-storage-button">Local Storage'ı Temizle</button>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Mesajları getir ve ekrana ekle
+    function displayMessages() {
+      const messagesDiv = document.getElementById('messages');
+      messagesDiv.innerHTML = '';
+
+      messages.forEach((message) => {
+        const messageElement = document.createElement('div');
+        messageElement.textContent = message;
+        messagesDiv.appendChild(messageElement);
+      });
+    }
+
+    // Mesajları otomatik olarak güncelle (her 1 saniyede bir)
+    setInterval(() => {
+      const savedMessages = localStorage.getItem('messages');
+
+      if (savedMessages) {
+        const newMessages = JSON.parse(savedMessages);
+
+        if (JSON.stringify(newMessages) !== JSON.stringify(messages)) {
+          messages = newMessages;
+          displayMessages();
+        }
+      }
+    }, 1000);
+
+    // Sayfa yüklendiğinde mesajları getir ve ekrana ekle
+    window.addEventListener('load', () => {
+      const savedMessages = localStorage.getItem('messages');
+
+      if (savedMessages) {
+        messages = JSON.parse(savedMessages);
+        displayMessages();
+      }
+    });
+
+
+
+  </script>
+</body>
+</html>

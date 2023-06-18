@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog gibimsi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Blog</h1>
+  </header>
+
+  <form id="message-form">
+    <input type="text" id="username-input" placeholder="Kullanıcı adı" required>
+    <input type="text" id="message-input" placeholder="Mesajınızı yazın">
+    <button type="submit">Gönder</button>
+  </form>
+
+  <h4 style="margin-left: 5vh;">Canım sıkıldı site yazdım anlam arama kardes, benim hakkımda ne dusunuyorsan yaz bise.</h4>
+
+  <script src="script.js"></script>
+  <script>
+    // Kullanıcı adı ve mesaj kutularını sıfırla
+    document.getElementById('message-form').addEventListener('submit', () => {
+      document.getElementById('username-input').value = '';
+      document.getElementById('message-input').value = '';
+    });
+  </script>
+</body>
+</html>

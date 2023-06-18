@@ -1,0 +1,68 @@
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #2196f3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 ,50 ,50,0px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  #messages {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+/* Kullanıcı adı inputu */
+#username-input {
+    margin: 50px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Mesaj inputu */
+  #message-input {
+    margin: 50px;
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0c7cd5;
+  }
+  
+  button:active {
+    background-color: #075d9c;
+  }
+  
